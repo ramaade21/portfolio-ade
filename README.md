@@ -1,8 +1,10 @@
-# Portfolio Ade Ramadona — Versi Statis (HTML/CSS/JS)
+# Portfolio Ade Ramadona — Versi Statis (HTML + Tailwind CSS + JS)
 
 Ini adalah versi **statis** dari project Laravel `portfolio-laravel-ade-ramadona`,
 dikonversi agar bisa langsung di-host di **GitHub Pages** (atau hosting statis
-apa pun) tanpa perlu server PHP, database, atau proses build.
+apa pun) tanpa perlu server PHP atau database. Styling memakai **Tailwind CSS v4**
+yang sudah di-compile menjadi `tailwind.css`, jadi untuk sekadar hosting tidak
+perlu menjalankan build.
 
 Tampilan & konten dibuat seakurat mungkin berdasarkan data asli di project
 Laravel kamu (seeder profile, experience, skills, projects) dan desain asli
@@ -12,33 +14,40 @@ cursor, particle background, typing effect, dll).
 ## Isi folder
 
 ```
-index.html   → halaman utama (semua section: hero, about, experience, skills, projects, contact)
-style.css    → semua styling (port dari resources/css/app.css)
-main.js      → semua interaksi (port dari resources/js/app.js + modules/*)
-avatar.jpg   → foto profil kamu
+index.html       → halaman utama (hero, flipbook, about, skills, experience, projects, education, contact)
+tailwind.css     → HASIL compile Tailwind (jangan diedit manual; ini yang dibaca browser)
+src/input.css    → sumber Tailwind: warna/font (theme), animasi, dan beberapa komponen kecil
+main.js          → semua interaksi (tema, bahasa, flipbook, form kontak, dll)
+avatar.jpg       → foto profil
+package.json     → script build (opsional, hanya untuk mengubah desain)
 ```
+
+> File lama `style.css` sudah tidak dipakai. Hapus dari repository kalau masih ada.
 
 ## Cara upload ke GitHub Pages
 
-1. Buat repository baru di GitHub, misalnya `portfolio-ade`.
-2. Upload keempat file di atas (`index.html`, `style.css`, `main.js`, `avatar.jpg`) ke root
-   repository tersebut — bisa lewat web (Add file → Upload files) atau lewat
-   git:
+1. Upload `index.html`, `tailwind.css`, `main.js`, `avatar.jpg`, dan `README.md` ke root
+   repository (Add file → Upload files), atau lewat git:
    ```bash
-   git init
-   git add index.html style.css main.js avatar.jpg
-   git commit -m "Portfolio statis"
-   git branch -M main
-   git remote add origin https://github.com/USERNAME/portfolio-ade.git
-   git push -u origin main
+   git add .
+   git commit -m "Update portofolio"
+   git push
    ```
-3. Di repository, buka **Settings → Pages**.
-4. Pada **Source**, pilih branch `main` dan folder `/ (root)`, lalu **Save**.
-5. Tunggu 1–2 menit, situs akan tersedia di:
-   `https://USERNAME.github.io/portfolio-ade`
+2. Di repository, buka **Settings → Pages**, pilih branch dan folder `/ (root)`, lalu **Save**.
+3. Tunggu 1–2 menit, situs akan tersedia di:
+   `https://USERNAME.github.io/portfolio-ade/`
 
-Tidak perlu langkah build apa pun — file-file ini sudah siap pakai langsung
-di browser.
+## Mengubah desain (opsional, butuh Node.js)
+
+Class Tailwind ditulis langsung di `index.html`. Setelah mengubahnya, compile ulang:
+
+```bash
+npm install        # sekali saja
+npm run build      # menghasilkan tailwind.css baru
+```
+
+Lalu upload `index.html` dan `tailwind.css` yang baru. Jika hanya mengubah teks
+(bukan class), tidak perlu build ulang.
 
 ## Catatan tentang perbedaan dari versi Laravel
 

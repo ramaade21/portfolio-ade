@@ -346,14 +346,34 @@ function initFlipBook() {
     }, { passive: true });
 }
 
-/* ── Contact form (mailto fallback, tidak ada backend di static site) ── */
+/* ── Contact form (kirim langsung ke email lewat Web3Forms, tanpa buka aplikasi email) ── */
 function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
     const submitBtn = form.querySelector('[type="submit"]');
+    const btnLabel = submitBtn.querySelector('span');
     const feedbackEl = document.getElementById('contact-form-feedback');
-    const destinationEmail = form.dataset.contactEmail || '';
+
+    const MSG = {
+        id: {
+            sending: 'Mengirim…',
+            ok: 'Pesan terkirim. Terima kasih, saya akan segera membalas.',
+            fail: 'Pesan gagal terkirim. Coba lagi nanti atau hubungi langsung lewat email.',
+            required: 'Harap isi semua field yang wajib (nama, email, pesan).',
+            nokey: 'Form belum dikonfigurasi (access key belum diisi).',
+            subjectDefault: 'Pesan baru dari portofolio',
+        },
+        en: {
+            sending: 'Sending…',
+            ok: 'Message sent. Thank you, I will reply soon.',
+            fail: 'Message could not be sent. Please try again later or email me directly.',
+            required: 'Please fill in all required fields (name, email, message).',
+            nokey: 'The form is not configured yet (access key is missing).',
+            subjectDefault: 'New message from portfolio',
+        },
+    };
+    const t = () => MSG[localStorage.getItem('lang') === 'en' ? 'en' : 'id'];
 
     function setFeedback(message, isError = false) {
         if (!feedbackEl) return;
@@ -362,24 +382,51 @@ function initContactForm() {
         feedbackEl.classList.remove('hidden');
     }
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const data = Object.fromEntries(new FormData(form).entries());
+        const accessKey = form.dataset.web3formsKey || '';
 
         if (!data.name || !data.email || !data.message) {
-            setFeedback('Harap isi semua field yang wajib (nama, email, pesan).', true);
+            setFeedback(t().required, true);
+            return;
+        }
+        if (!accessKey || accessKey === 'GANTI_DENGAN_ACCESS_KEY') {
+            setFeedback(t().nokey, true);
             return;
         }
 
-        const subject = encodeURIComponent(data.subject || `Pesan dari ${data.name}`);
-        const body = encodeURIComponent(
-            `Nama: ${data.name}\nEmail: ${data.email}\n\n${data.message}`
-        );
-
+        const originalLabel = btnLabel ? btnLabel.textContent : '';
         submitBtn.disabled = true;
-        window.location.href = `mailto:${destinationEmail}?subject=${subject}&body=${body}`;
-        setFeedback('Membuka aplikasi email Anda untuk mengirim pesan…');
-        setTimeout(() => { submitBtn.disabled = false; }, 1200);
+        if (btnLabel) btnLabel.textContent = t().sending;
+
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify({
+                    access_key: accessKey,
+                    name: data.name,
+                    email: data.email,
+                    subject: data.subject || `${t().subjectDefault} — ${data.name}`,
+                    message: data.message,
+                    botcheck: data.botcheck || '',
+                    from_name: 'Portofolio Ade Ramadona',
+                }),
+            });
+            const json = await res.json();
+            if (res.ok && json.success) {
+                setFeedback(t().ok);
+                form.reset();
+            } else {
+                setFeedback(t().fail, true);
+            }
+        } catch (err) {
+            setFeedback(t().fail, true);
+        } finally {
+            submitBtn.disabled = false;
+            if (btnLabel) btnLabel.textContent = originalLabel;
+        }
     });
 }
 

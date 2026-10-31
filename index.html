@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ade Ramadona — IT Full Stack Developer</title>
+<meta name="description" content="Full Stack Developer dengan pengalaman 8+ tahun di siklus pengembangan perangkat lunak lengkap, berfokus pada PHP (Laravel), RESTful API, dan MySQL di sektor korporat dan perbankan.">
+
+<meta property="og:title" content="Ade Ramadona — IT Full Stack Developer">
+<meta property="og:description" content="Full Stack Developer dengan pengalaman 8+ tahun di siklus pengembangan perangkat lunak lengkap, berfokus pada PHP (Laravel), RESTful API, dan MySQL di sektor korporat dan perbankan.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ade Ramadona",
+  "jobTitle": "IT Full Stack Developer",
+  "email": "vflanker@gmail.com"
+}
+</script>
+</head>
+<body class="antialiased">
+
+<div id="cd"></div>
+<div id="cr"></div>
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<nav style="position:fixed; top:0; left:0; right:0; z-index:50; backdrop-filter:blur(20px); border-bottom:1px solid var(--gb); background: var(--gl);">
+    <div class="max-w-6xl" style="display:flex; align-items:center; justify-content:space-between; height:64px; padding:0 1.5rem;">
+        <span class="font-display" style="font-weight:700; font-size:.85rem; letter-spacing:.15em; color: var(--c);">
+            AR<span style="color: var(--t2);">.DEV</span>
+        </span>
+
+        <div class="font-mono" style="display:flex; align-items:center; gap:1.4rem; font-size:.64rem; text-transform:uppercase; letter-spacing:.12em; color: var(--t2);" id="desktop-nav">
+            <a href="#about" data-cursor-hover data-i18n data-id="TENTANG" data-en="ABOUT">TENTANG</a>
+            <a href="#skills" data-cursor-hover data-i18n data-id="SKILL" data-en="SKILLS">SKILL</a>
+            <a href="#experience" data-cursor-hover data-i18n data-id="PENGALAMAN" data-en="EXPERIENCE">PENGALAMAN</a>
+            <a href="#projects" data-cursor-hover data-i18n data-id="PROYEK" data-en="PROJECTS">PROYEK</a>
+            <a href="#education" data-cursor-hover data-i18n data-id="PENDIDIKAN" data-en="EDUCATION">PENDIDIKAN</a>
+            <a href="#contact" data-cursor-hover data-i18n data-id="KONTAK" data-en="CONTACT">KONTAK</a>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:.75rem;">
+            <div style="position:relative;">
+                <button data-lang-toggle class="font-mono" style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; color: var(--t2); background:none; border:none; cursor:pointer; padding:.25rem .5rem;" data-cursor-hover>
+                    <span data-lang-current>ID</span>
+                </button>
+                <div data-lang-menu class="glass hidden" style="position:absolute; right:0; margin-top:.5rem; width:7rem; padding:.25rem 0; z-index:60;">
+                    <a href="#" data-lang-option="id" style="display:block; padding:.5rem .75rem; font-size:.75rem; text-decoration:none; color:var(--t);">Indonesia</a>
+                    <a href="#" data-lang-option="en" style="display:block; padding:.5rem .75rem; font-size:.75rem; text-decoration:none; color:var(--t);">English</a>
+                </div>
+            </div>
+
+            <button data-theme-toggle aria-label="Toggle theme" class="glass" style="width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; color: var(--c); background:none; cursor:pointer;" data-cursor-hover>
+                <svg data-icon-dark xmlns="http://www.w3.org/2000/svg" style="width:16px; height:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.36 6.36l-.7-.7M6.34 6.34l-.7-.7m12.02 0l-.7.7M6.34 17.66l-.7.7M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                <svg data-icon-light xmlns="http://www.w3.org/2000/svg" style="width:16px; height:16px; display:none;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            </button>
+
+            <button id="mobile-menu-toggle" aria-label="Menu" style="display:none; background:none; border:none; color:var(--t); font-size:1.4rem; cursor:pointer;">☰</button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden font-mono mobile-menu-panel" style="background: var(--gl); border-top:1px solid var(--gb); padding:1rem 1.5rem; gap:1rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color: var(--t2);">
+        <a href="#about" data-i18n data-id="Tentang" data-en="About">Tentang</a>
+        <a href="#skills" data-i18n data-id="Skill" data-en="Skills">Skill</a>
+        <a href="#experience" data-i18n data-id="Pengalaman" data-en="Experience">Pengalaman</a>
+        <a href="#projects" data-i18n data-id="Proyek" data-en="Projects">Proyek</a>
+        <a href="#education" data-i18n data-id="Pendidikan" data-en="Education">Pendidikan</a>
+        <a href="#contact" data-i18n data-id="Kontak" data-en="Contact">Kontak</a>
+    </div>
+</nav>
+
+<div id="prog"></div>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section id="home" style="position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:0 1.5rem; padding-top:4rem; overflow:hidden;">
+    <canvas id="particles-canvas" style="position:absolute; inset:0; width:100%; height:100%; opacity:.6; pointer-events:none;"></canvas>
+    <div style="position:absolute; inset:0; pointer-events:none; background: radial-gradient(circle at 20% 20%, rgba(0,245,255,.06), transparent 50%), radial-gradient(circle at 80% 80%, rgba(0,128,255,.05), transparent 50%);"></div>
+
+    <div class="hero-grid" style="position:relative; z-index:10; max-width:64rem; width:100%; display:grid; gap:3rem; align-items:center;">
+        <div class="fade-up hero-text" style="text-align:center;">
+            <p class="font-mono" style="font-size:.7rem; letter-spacing:.3em; text-transform:uppercase; margin-bottom:1rem; color: var(--c);">
+                <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--c); margin-right:.5rem;" class="animate-pulse-dot"></span>
+                <span data-i18n data-id="Tersedia untuk proyek baru" data-en="Available for new projects">Tersedia untuk proyek baru</span>
+            </p>
+
+            <h1 class="font-display" style="font-weight:900; font-size:2.6rem; line-height:1.15; margin-bottom:.75rem; color: var(--t);">
+                Ade Ramadona
+            </h1>
+
+            <p class="font-mono" style="font-size:1.05rem; margin-bottom:1.5rem; height:2rem; color: var(--c);" id="typing-target" data-typing-roles='["Full Stack Developer","PHP Developer","Laravel Developer","RESTful API Developer","Vue 3 Developer","IT Programmer"]'></p>
+
+            <p style="color: var(--t2); font-size:1rem; line-height:1.6; margin-bottom:2rem; max-width:32rem; margin-left:auto; margin-right:auto;"
+               data-i18n
+               data-id="Full Stack Developer dengan pengalaman 8+ tahun di siklus pengembangan perangkat lunak lengkap, berfokus pada PHP (Laravel), RESTful API, dan MySQL di sektor korporat dan perbankan."
+               data-en="Full Stack Developer with 8+ years across the full software development life cycle, focused on PHP (Laravel), RESTful APIs, and MySQL in the corporate and banking sectors.">Full Stack Developer dengan pengalaman 8+ tahun di siklus pengembangan perangkat lunak lengkap, berfokus pada PHP (Laravel), RESTful API, dan MySQL di sektor korporat dan perbankan.</p>
+
+            <div style="display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center;">
+                <button id="open-book-btn" class="btn btn-c" data-cursor-hover>
+                    📖 <span data-i18n data-id="Lihat Profil" data-en="View Profile">Lihat Profil</span>
+                </button>
+                <a href="#contact" class="btn btn-o" data-cursor-hover>
+                    <span data-i18n data-id="Hire Me" data-en="Hire Me">Hire Me</span>
+                </a>
+            </div>
+
+            <div class="font-mono" style="display:flex; gap:2rem; margin-top:2.5rem; justify-content:center;">
+                <div>
+                    <p style="font-size:1.5rem; font-weight:700; color: var(--c); margin:0;"><span data-counter="8">0</span>+</p>
+                    <p style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; color: var(--t3); margin:0;" data-i18n data-id="Tahun Pengalaman" data-en="Years Exp.">Tahun Pengalaman</p>
+                </div>
+                <div>
+                    <p style="font-size:1.5rem; font-weight:700; color: var(--c); margin:0;"><span data-counter="6">0</span>+</p>
+                    <p style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; color: var(--t3); margin:0;" data-i18n data-id="Klien Korporat" data-en="Corporate Clients">Klien Korporat</p>
+                </div>
+                <div>
+                    <p style="font-size:1.5rem; font-weight:700; color: var(--c); margin:0;"><span data-counter="30">0</span>+</p>
+                    <p style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; color: var(--t3); margin:0;" data-i18n data-id="Teknologi" data-en="Technologies">Teknologi</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:flex; justify-content:center;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:1.5rem;">
+                <div id="book-cover" class="book-cover animate-page-float" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 1.5rem;" data-cursor-hover>
+                    <div class="book-spine-label">PORTFOLIO</div>
+
+                    <div class="glass" style="width:96px; height:96px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; overflow:hidden; border:2px solid var(--cb);">
+                        <img src="avatar.jpg" alt="Ade Ramadona" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <h2 class="font-display" style="font-weight:700; font-size:1.1rem; margin:0 0 .25rem; color: var(--t);">Ade Ramadona</h2>
+                    <p class="font-mono" style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; margin:0 0 1rem; color: var(--c);">FULL STACK DEVELOPER</p>
+
+                    <p class="font-mono" style="font-size:.6rem; color: var(--t3); font-style:italic; margin:0;" data-i18n data-id='&quot;Membangun sistem yang tangguh, baris demi baris.&quot;' data-en='&quot;Building robust systems, line by line.&quot;'>"Membangun sistem yang tangguh, baris demi baris."</p>
+
+                    <div class="font-mono" style="margin-top:1.5rem; font-size:.6rem; text-transform:uppercase; letter-spacing:.15em; color: var(--t3); display:flex; align-items:center; gap:.5rem;">
+                        <span data-i18n data-id="Klik untuk membuka" data-en="Click to open">Klik untuk membuka</span> <span style="color: var(--c);">→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); font-family:'JetBrains Mono',monospace; font-size:.6rem; text-transform:uppercase; letter-spacing:.15em; color: var(--t3); display:flex; flex-direction:column; align-items:center; gap:.5rem;" class="fade-up">
+        <span data-i18n data-id="Scroll" data-en="Scroll">Scroll</span>
+        <span style="width:1px; height:32px; background: linear-gradient(to bottom, var(--c), transparent);"></span>
+    </div>
+</section>
+
+<!-- ═══════════════════════ FLIPBOOK CONTAINER ═══════════════════════ -->
+<section id="flipbook-container" class="hidden" style="min-height:100vh; flex-direction:column; align-items:center; justify-content:center; padding:4rem 1rem; position:relative; z-index:5;">
+    <div class="font-mono" style="display:flex; align-items:center; justify-content:space-between; width:100%; max-width:680px; margin-bottom:1.25rem; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; color: var(--t2);">
+        <button data-close-book class="btn btn-o" style="padding:.6rem 1rem;" data-cursor-hover>✕ <span data-i18n data-id="Tutup" data-en="Close">Tutup</span></button>
+        <span data-page-indicator>1 / 7</span>
+        <div style="display:flex; gap:.5rem;">
+            <button data-flip-prev class="btn btn-o" style="padding:.6rem .9rem;" data-cursor-hover>‹</button>
+            <button data-flip-next class="btn btn-o" style="padding:.6rem .9rem;" data-cursor-hover>›</button>
+        </div>
+    </div>
+
+    <div id="flipbook">
+        <!-- Halaman 1: Cover -->
+        <div class="page" data-density="hard">
+            <div class="page-flip-content" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+                <div class="glass" style="width:112px; height:112px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem; border:2px solid var(--cb); overflow:hidden;">
+                    <img src="avatar.jpg" alt="Ade Ramadona" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h2 class="font-display" style="font-weight:700; font-size:1.25rem; margin:0 0 .5rem; color: var(--t);">Ade Ramadona</h2>
+                <p class="font-mono" style="font-size:.7rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:1rem; color: var(--c);">FULL STACK DEVELOPER</p>
+                <p class="font-mono" style="font-size:.65rem; color: var(--t3); font-style:italic;" data-i18n data-id='&quot;Membangun sistem yang tangguh, baris demi baris.&quot;' data-en='&quot;Building robust systems, line by line.&quot;'>"Membangun sistem yang tangguh, baris demi baris."</p>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="page-flip-content">
+                <p class="font-mono" style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:.5rem; color: var(--c);">01 — <span data-i18n data-id="Tentang Saya" data-en="About Me">Tentang Saya</span></p>
+                <h3 class="font-display" style="font-weight:700; font-size:1.1rem; margin:0 0 1rem; color: var(--t);"><span data-i18n data-id="Ringkasan Profil" data-en="Profile Summary">Ringkasan Profil</span></h3>
+                <p style="font-size:.8rem; line-height:1.6; margin-bottom:.9rem; color: var(--t2);" data-i18n data-id="Full Stack Developer dengan pengalaman 8+ tahun dalam siklus pengembangan perangkat lunak (SDLC) lengkap: analisis kebutuhan, desain, coding, testing, hingga deployment dan pemeliharaan aplikasi web production di sektor korporat dan perbankan. Kuat di ekosistem PHP modern (Laravel dan CodeIgniter), perancangan dan pengamanan RESTful API, optimasi query MySQL/MariaDB, serta antarmuka HTML5, CSS3, JavaScript, dan Vue 3." data-en="Full Stack Developer with 8+ years of experience across the full software development life cycle (SDLC): requirements analysis, design, coding, testing, through deployment and maintenance of production web applications in the corporate and banking sectors. Strong in the modern PHP ecosystem (Laravel and CodeIgniter), RESTful API design and security, MySQL/MariaDB query optimization, and HTML5, CSS3, JavaScript, and Vue 3 interfaces.">Full Stack Developer dengan pengalaman 8+ tahun dalam siklus pengembangan perangkat lunak (SDLC) lengkap: analisis kebutuhan, desain, coding, testing, hingga deployment dan pemeliharaan aplikasi web production di sektor korporat dan perbankan. Kuat di ekosistem PHP modern (Laravel dan CodeIgniter), perancangan dan pengamanan RESTful API, optimasi query MySQL/MariaDB, serta antarmuka HTML5, CSS3, JavaScript, dan Vue 3.</p>
+  <p style="font-size:.8rem; line-height:1.6; margin-bottom:0; color: var(--t2);" data-i18n data-id="Terbiasa memelihara dan meng-upgrade sistem legacy, mengelola repository Git dengan alur branching dan code review, membangun pipeline CI/CD, serta deployment dengan Docker di server Linux. Menguasai Python untuk scripting, otomasi deployment, dan pembuatan API (FastAPI). Cepat mempelajari teknologi baru dan berpengalaman memimpin serta membimbing developer junior." data-en="Experienced in maintaining and upgrading legacy systems, managing Git repositories with branching workflows and code review, building CI/CD pipelines, and deploying with Docker on Linux servers. Proficient in Python for scripting, deployment automation, and API development (FastAPI). A fast learner of new technologies with experience leading and mentoring junior developers.">Terbiasa memelihara dan meng-upgrade sistem legacy, mengelola repository Git dengan alur branching dan code review, membangun pipeline CI/CD, serta deployment dengan Docker di server Linux. Menguasai Python untuk scripting, otomasi deployment, dan pembuatan API (FastAPI). Cepat mempelajari teknologi baru dan berpengalaman memimpin serta membimbing developer junior.</p>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="page-flip-content">
+                <p class="font-mono" style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:.5rem; color: var(--c);">02 — <span data-i18n data-id="Kemampuan" data-en="Skills">Kemampuan</span></p>
+                <h3 class="font-display" style="font-weight:700; font-size:1.1rem; margin:0 0 1rem; color: var(--t);"><span data-i18n data-id="Keahlian Teknis" data-en="Technical Skills">Keahlian Teknis</span></h3>
+                <div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Backend &amp; Framework" data-en="Backend &amp; Frameworks">Backend &amp; Framework</p><div class="chip-row"><span class="chip" style="font-size:0.62rem;">PHP (7.x/8.x)</span><span class="chip" style="font-size:0.62rem;">Laravel</span><span class="chip" style="font-size:0.62rem;">CodeIgniter</span><span class="chip" style="font-size:0.62rem;" data-i18n data-id="Python (FastAPI, scripting &amp; automasi)" data-en="Python (FastAPI, scripting &amp; automation)">Python (FastAPI, scripting &amp; automasi)</span><span class="chip" style="font-size:0.62rem;">Go</span><span class="chip" style="font-size:0.62rem;">Spring Boot</span></div></div><div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Frontend" data-en="Frontend">Frontend</p><div class="chip-row"><span class="chip" style="font-size:0.62rem;">HTML5</span><span class="chip" style="font-size:0.62rem;">CSS3</span><span class="chip" style="font-size:0.62rem;">JavaScript</span><span class="chip" style="font-size:0.62rem;">Vue 3</span></div></div><div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Database" data-en="Database">Database</p><div class="chip-row"><span class="chip" style="font-size:0.62rem;" data-i18n data-id="MySQL (utama)" data-en="MySQL (primary)">MySQL (utama)</span><span class="chip" style="font-size:0.62rem;">MariaDB</span><span class="chip" style="font-size:0.62rem;">PostgreSQL</span></div><p style="font-size:.72rem; color: var(--t3); margin:.6rem 0 0;"><span data-i18n data-id="Desain database, penulisan query efisien, dan tuning performa." data-en="Database design, efficient query writing, and performance tuning.">Desain database, penulisan query efisien, dan tuning performa.</span></p></div><div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="API &amp; Integrasi" data-en="API &amp; Integration">API &amp; Integrasi</p><div class="chip-row"><span class="chip" style="font-size:0.62rem;">RESTful API / Web Services</span><span class="chip" style="font-size:0.62rem;">GraphQL</span><span class="chip" style="font-size:0.62rem;">JWT</span><span class="chip" style="font-size:0.62rem;">OAuth</span><span class="chip" style="font-size:0.62rem;">Sanctum</span><span class="chip" style="font-size:0.62rem;">Microservices</span><span class="chip" style="font-size:0.62rem;" data-i18n data-id="Integrasi PABX dan Asterisk" data-en="PABX and Asterisk integration">Integrasi PABX dan Asterisk</span><span class="chip" style="font-size:0.62rem;" data-i18n data-id="Integrasi layanan pihak ketiga" data-en="Third-party service integration">Integrasi layanan pihak ketiga</span></div></div><div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Version Control &amp; CI/CD" data-en="Version Control &amp; CI/CD">Version Control &amp; CI/CD</p><div class="chip-row"><span class="chip" style="font-size:0.62rem;">Git (branching, pull request, code review)</span><span class="chip" style="font-size:0.62rem;">GitHub Actions</span><span class="chip" style="font-size:0.62rem;">GitLab CI</span><span class="chip" style="font-size:0.62rem;">Jenkins</span></div></div><div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Infrastruktur &amp; Monitoring" data-en="Infrastructure &amp; Monitoring">Infrastruktur &amp; Monitoring</p><div class="chip-row"><span class="chip" style="font-size:0.62rem;">Docker</span><span class="chip" style="font-size:0.62rem;">Kubernetes</span><span class="chip" style="font-size:0.62rem;" data-i18n data-id="Linux (server &amp; CLI)" data-en="Linux (server &amp; CLI)">Linux (server &amp; CLI)</span><span class="chip" style="font-size:0.62rem;">AWS (EC2)</span><span class="chip" style="font-size:0.62rem;">Cloudflare</span><span class="chip" style="font-size:0.62rem;">Redis</span><span class="chip" style="font-size:0.62rem;">Apache Kafka</span><span class="chip" style="font-size:0.62rem;">Grafana</span><span class="chip" style="font-size:0.62rem;">Prometheus</span></div></div><div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Praktik Kerja" data-en="Work Practices">Praktik Kerja</p><div class="chip-row"><span class="chip" style="font-size:0.62rem;" data-i18n data-id="Clean code" data-en="Clean code">Clean code</span><span class="chip" style="font-size:0.62rem;">Refactoring</span><span class="chip" style="font-size:0.62rem;">Application security (OWASP Top 10)</span><span class="chip" style="font-size:0.62rem;" data-i18n data-id="Debugging masalah production" data-en="Production debugging">Debugging masalah production</span><span class="chip" style="font-size:0.62rem;" data-i18n data-id="Dokumentasi kode" data-en="Code documentation">Dokumentasi kode</span><span class="chip" style="font-size:0.62rem;">Mentoring</span></div></div><div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="AI Coding" data-en="AI Coding">AI Coding</p><p style="font-size:.72rem; color: var(--t2); line-height:1.6; margin:0;"><span data-i18n data-id="Pemanfaatan AI coding assistant untuk mempercepat coding, debugging, refactoring, dan dokumentasi." data-en="Using AI coding assistants to speed up coding, debugging, refactoring, and documentation.">Pemanfaatan AI coding assistant untuk mempercepat coding, debugging, refactoring, dan dokumentasi.</span></p></div><div class="glass skill-card" style="margin-bottom:.75rem;"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Bahasa" data-en="Languages">Bahasa</p><div class="skill-row" style="font-size:.72rem; margin-top:.4rem;"><span><span data-i18n data-id="Indonesia" data-en="Indonesian">Indonesia</span></span><span class="font-mono" style="color:var(--c);"><span data-i18n data-id="Native" data-en="Native">Native</span></span></div><div class="skill-row" style="font-size:.72rem; margin-top:.4rem;"><span><span data-i18n data-id="Inggris" data-en="English">Inggris</span></span><span class="font-mono" style="color:var(--c);"><span data-i18n data-id="Menengah — lisan &amp; tulisan" data-en="Intermediate — spoken &amp; written">Menengah — lisan &amp; tulisan</span></span></div></div>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="page-flip-content">
+                <p class="font-mono" style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:.5rem; color: var(--c);">03 — <span data-i18n data-id="Pengalaman" data-en="Experience">Pengalaman</span></p>
+                <h3 class="font-display" style="font-weight:700; font-size:1.1rem; margin:0 0 1rem; color: var(--t);"><span data-i18n data-id="Pengalaman Kerja" data-en="Work Experience">Pengalaman Kerja</span></h3>
+                <div style="padding-left:1rem; border-left:2px solid var(--cb); margin-bottom:1.25rem;">
+    <p class="font-mono" style="font-size:.65rem; color: var(--c); margin:0;"><span data-i18n data-id="Juli 2022 – Agustus 2025" data-en="July 2022 – August 2025">Juli 2022 – Agustus 2025</span></p>
+    <p class="font-display" style="font-weight:600; font-size:.9rem; margin:.25rem 0 0; color: var(--t);">IT Programmer</p>
+    <p style="font-size:.8rem; color: var(--t2); margin:.2rem 0 .6rem;">PT Danamas Insan Kreasi Andalan</p>
+    <ul class="bullet-list"><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Merancang, membangun, dan men-deploy 3+ sistem backend berbasis Laravel, CodeIgniter, Spring Boot, dan Go sesuai kebutuhan bisnis, mencakup analisis, desain, coding, testing, hingga production." data-en="Designed, built, and deployed 3+ backend systems based on Laravel, CodeIgniter, Spring Boot, and Go to meet business needs, covering analysis, design, coding, testing, up to production.">Merancang, membangun, dan men-deploy 3+ sistem backend berbasis Laravel, CodeIgniter, Spring Boot, dan Go sesuai kebutuhan bisnis, mencakup analisis, desain, coding, testing, hingga production.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Merancang dan mengamankan RESTful API serta arsitektur microservices yang scalable untuk integrasi antar sistem, dengan dokumentasi kode yang terjaga." data-en="Designed and secured RESTful APIs and scalable microservices architecture for system-to-system integration, with well-maintained code documentation.">Merancang dan mengamankan RESTful API serta arsitektur microservices yang scalable untuk integrasi antar sistem, dengan dokumentasi kode yang terjaga.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Membuat script Python untuk otomasi deployment yang mempercepat proses rilis dari 5 menit menjadi 1 menit, serta otomasi pembuatan report; membangun layanan API dengan FastAPI." data-en="Wrote Python scripts for deployment automation that cut release time from 5 minutes to 1 minute, plus report generation automation; built API services with FastAPI.">Membuat script Python untuk otomasi deployment yang mempercepat proses rilis dari 5 menit menjadi 1 menit, serta otomasi pembuatan report; membangun layanan API dengan FastAPI.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Membangun dan memelihara pipeline CI/CD (GitHub) untuk otomasi build, testing, dan deployment; mengelola server Linux production melalui CLI." data-en="Built and maintained CI/CD pipelines (GitHub) to automate build, testing, and deployment; managed production Linux servers via CLI.">Membangun dan memelihara pipeline CI/CD (GitHub) untuk otomasi build, testing, dan deployment; mengelola server Linux production melalui CLI.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Men-deploy aplikasi ke AWS (EC2) dan Cloudflare, serta memantau performa dan kesehatan sistem dengan Grafana dan Prometheus; berpengalaman menggunakan Kubernetes." data-en="Deployed applications to AWS (EC2) and Cloudflare, and monitored system performance and health with Grafana and Prometheus; experienced with Kubernetes.">Men-deploy aplikasi ke AWS (EC2) dan Cloudflare, serta memantau performa dan kesehatan sistem dengan Grafana dan Prometheus; berpengalaman menggunakan Kubernetes.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Melakukan tuning database MySQL, MariaDB, dan PostgreSQL (optimasi query dan indeks) untuk menjaga performa dan stabilitas sistem." data-en="Tuned MySQL, MariaDB, and PostgreSQL databases (query and index optimization) to maintain system performance and stability.">Melakukan tuning database MySQL, MariaDB, dan PostgreSQL (optimasi query dan indeks) untuk menjaga performa dan stabilitas sistem.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Menerapkan application security (OWASP) dan caching Redis untuk melindungi data pengguna dan meningkatkan performa." data-en="Applied application security (OWASP) and Redis caching to protect user data and improve performance.">Menerapkan application security (OWASP) dan caching Redis untuk melindungi data pengguna dan meningkatkan performa.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Memimpin tim kecil (1–2 developer), menerapkan alur Git dan code review rutin, serta memberi mentoring teknis untuk menjaga standar kualitas kode." data-en="Led a small team (1–2 developers), applied Git workflows and regular code review, and provided technical mentoring to maintain code quality standards.">Memimpin tim kecil (1–2 developer), menerapkan alur Git dan code review rutin, serta memberi mentoring teknis untuk menjaga standar kualitas kode.</span></li></ul>
+    <div style="margin-top:.6rem;"><div class="chip-row"><span class="chip chip-solid" style="font-size:.58rem;">Laravel</span><span class="chip chip-solid" style="font-size:.58rem;">CodeIgniter</span><span class="chip chip-solid" style="font-size:.58rem;">Spring Boot</span><span class="chip chip-solid" style="font-size:.58rem;">Go</span><span class="chip chip-solid" style="font-size:.58rem;">Python</span><span class="chip chip-solid" style="font-size:.58rem;">FastAPI</span><span class="chip chip-solid" style="font-size:.58rem;">Docker</span><span class="chip chip-solid" style="font-size:.58rem;">Kubernetes</span><span class="chip chip-solid" style="font-size:.58rem;">GitHub Actions</span><span class="chip chip-solid" style="font-size:.58rem;">AWS EC2</span><span class="chip chip-solid" style="font-size:.58rem;">Cloudflare</span><span class="chip chip-solid" style="font-size:.58rem;">Redis</span><span class="chip chip-solid" style="font-size:.58rem;">Grafana</span><span class="chip chip-solid" style="font-size:.58rem;">Prometheus</span></div></div>
+    
+  </div><div style="padding-left:1rem; border-left:2px solid var(--cb); margin-bottom:1.25rem;">
+    <p class="font-mono" style="font-size:.65rem; color: var(--c); margin:0;"><span data-i18n data-id="September 2014 – Juli 2022" data-en="September 2014 – July 2022">September 2014 – Juli 2022</span></p>
+    <p class="font-display" style="font-weight:600; font-size:.9rem; margin:.25rem 0 0; color: var(--t);">IT Programmer</p>
+    <p style="font-size:.8rem; color: var(--t2); margin:.2rem 0 .6rem;">PT Valdo Sumber Mandiri</p>
+    <ul class="bullet-list"><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Mengembangkan dan memelihara sistem telesales berbasis PHP (CodeIgniter) dan Docker untuk 6 klien perbankan (BCA, UOB, Permata, Mandiri, Nobu, Maybank), termasuk integrasi ke berbagai layanan pihak ketiga." data-en="Developed and maintained telesales systems based on PHP (CodeIgniter) and Docker for 6 banking clients (BCA, UOB, Permata, Mandiri, Nobu, Maybank), including integration with various third-party services.">Mengembangkan dan memelihara sistem telesales berbasis PHP (CodeIgniter) dan Docker untuk 6 klien perbankan (BCA, UOB, Permata, Mandiri, Nobu, Maybank), termasuk integrasi ke berbagai layanan pihak ketiga.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Merancang dan membangun antarmuka sistem menggunakan HTML, CSS, dan JavaScript." data-en="Designed and built system interfaces using HTML, CSS, and JavaScript.">Merancang dan membangun antarmuka sistem menggunakan HTML, CSS, dan JavaScript.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Bertanggung jawab atas deployment dan pengelolaan sistem produksi berbasis PHP, MySQL, dan MariaDB di server Linux, termasuk query optimization dan tuning performa." data-en="Responsible for deploying and managing production systems based on PHP, MySQL, and MariaDB on Linux servers, including query optimization and performance tuning.">Bertanggung jawab atas deployment dan pengelolaan sistem produksi berbasis PHP, MySQL, dan MariaDB di server Linux, termasuk query optimization dan tuning performa.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Menganalisis, men-debug, dan memperbaiki masalah pada sistem production serta menjaga keamanan dan keandalan sistem yang menangani data sensitif perbankan dalam jangka panjang." data-en="Analyzed, debugged, and fixed issues on production systems while maintaining the long-term security and reliability of systems handling sensitive banking data.">Menganalisis, men-debug, dan memperbaiki masalah pada sistem production serta menjaga keamanan dan keandalan sistem yang menangani data sensitif perbankan dalam jangka panjang.</span></li></ul>
+    <div style="margin-top:.6rem;"><div class="chip-row"><span class="chip chip-solid" style="font-size:.58rem;">PHP</span><span class="chip chip-solid" style="font-size:.58rem;">CodeIgniter</span><span class="chip chip-solid" style="font-size:.58rem;">Docker</span><span class="chip chip-solid" style="font-size:.58rem;">MySQL</span><span class="chip chip-solid" style="font-size:.58rem;">MariaDB</span><span class="chip chip-solid" style="font-size:.58rem;">HTML</span><span class="chip chip-solid" style="font-size:.58rem;">CSS</span><span class="chip chip-solid" style="font-size:.58rem;">JavaScript</span><span class="chip chip-solid" style="font-size:.58rem;">Linux</span></div></div>
+    <p style="font-size:.7rem; color: var(--t3); margin-top:.5rem;"><span data-i18n data-id="Klien" data-en="Clients">Klien</span>: BCA, UOB, Permata, Mandiri, Nobu, Maybank</p>
+  </div>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="page-flip-content">
+                <p class="font-mono" style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:.5rem; color: var(--c);">04 — <span data-i18n data-id="Proyek" data-en="Projects">Proyek</span></p>
+                <h3 class="font-display" style="font-weight:700; font-size:1.1rem; margin:0 0 1rem; color: var(--t);"><span data-i18n data-id="Proyek Pribadi" data-en="Personal Projects">Proyek Pribadi</span></h3>
+                <div class="glass" style="padding:.9rem; margin-bottom:1rem;">
+    <span class="chip chip-solid" style="font-size:.58rem; margin-bottom:.4rem; width:fit-content;">WEB · REAL-TIME</span>
+    <p class="font-mono" style="font-size:.62rem; color: var(--c); margin:.3rem 0 0;"><span data-i18n data-id="Mei 2026 – Juli 2026" data-en="May 2026 – July 2026">Mei 2026 – Juli 2026</span></p>
+    <p class="font-display" style="font-weight:600; font-size:.9rem; margin:.2rem 0 0;">Kopi Senja</p>
+    <p style="font-size:.72rem; color: var(--t3); margin:0 0 .6rem;"><span data-i18n data-id="Sistem Manajemen Coffee Shop Real-time" data-en="Real-time Coffee Shop Management System">Sistem Manajemen Coffee Shop Real-time</span></p>
+    <ul class="bullet-list"><li style="font-size:.72rem;"><span style="color: var(--c);">✓</span> <span data-i18n data-id="Dibangun dengan Laravel 11, PostgreSQL, Vue 3, dan Laravel Reverb (WebSocket); fitur pemesanan via QR meja, kitchen display, dan akses multi-role." data-en="Built with Laravel 11, PostgreSQL, Vue 3, and Laravel Reverb (WebSocket); features table-QR ordering, a kitchen display, and multi-role access.">Dibangun dengan Laravel 11, PostgreSQL, Vue 3, dan Laravel Reverb (WebSocket); fitur pemesanan via QR meja, kitchen display, dan akses multi-role.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">✓</span> <span data-i18n data-id="Menyelesaikan kendala deployment di stack Windows/WampServer: konflik versi PHP, sesi CSRF, dan routing IP LAN untuk QR code." data-en="Resolved deployment issues on the Windows/WampServer stack: PHP version conflicts, CSRF sessions, and LAN IP routing for QR codes.">Menyelesaikan kendala deployment di stack Windows/WampServer: konflik versi PHP, sesi CSRF, dan routing IP LAN untuk QR code.</span></li></ul>
+    <div style="margin-top:.6rem;"><div class="chip-row"><span class="chip" style="font-size:.58rem;">Laravel 11</span><span class="chip" style="font-size:.58rem;">PostgreSQL</span><span class="chip" style="font-size:.58rem;">Vue 3</span><span class="chip" style="font-size:.58rem;">Laravel Reverb</span><span class="chip" style="font-size:.58rem;">WebSocket</span></div></div>
+  </div><div class="glass" style="padding:.9rem; margin-bottom:1rem;">
+    <span class="chip chip-solid" style="font-size:.58rem; margin-bottom:.4rem; width:fit-content;">WEB · POS</span>
+    <p class="font-mono" style="font-size:.62rem; color: var(--c); margin:.3rem 0 0;"><span data-i18n data-id="Juli 2026 – Agustus 2026" data-en="July 2026 – August 2026">Juli 2026 – Agustus 2026</span></p>
+    <p class="font-display" style="font-weight:600; font-size:.9rem; margin:.2rem 0 0;">RumahAtap</p>
+    <p style="font-size:.72rem; color: var(--t3); margin:0 0 .6rem;"><span data-i18n data-id="Sistem POS &amp; Manajemen Depot Multi-outlet" data-en="POS &amp; Multi-outlet Depot Management System">Sistem POS &amp; Manajemen Depot Multi-outlet</span></p>
+    <ul class="bullet-list"><li style="font-size:.72rem;"><span style="color: var(--c);">✓</span> <span data-i18n data-id="Dibangun dengan Laravel 11, MySQL, dan Bootstrap 5; fitur barcode scanning, multi-kasir, laporan Excel/PDF, dan pelacakan status pembayaran." data-en="Built with Laravel 11, MySQL, and Bootstrap 5; features barcode scanning, multi-cashier, Excel/PDF reports, and payment status tracking.">Dibangun dengan Laravel 11, MySQL, dan Bootstrap 5; fitur barcode scanning, multi-kasir, laporan Excel/PDF, dan pelacakan status pembayaran.</span></li></ul>
+    <div style="margin-top:.6rem;"><div class="chip-row"><span class="chip" style="font-size:.58rem;">Laravel 11</span><span class="chip" style="font-size:.58rem;">MySQL</span><span class="chip" style="font-size:.58rem;">Bootstrap 5</span></div></div>
+  </div><div class="glass" style="padding:.9rem; margin-bottom:1rem;">
+    <span class="chip chip-solid" style="font-size:.58rem; margin-bottom:.4rem; width:fit-content;">MOBILE · ANDROID</span>
+    <p class="font-mono" style="font-size:.62rem; color: var(--c); margin:.3rem 0 0;"><span data-i18n data-id="September 2026" data-en="September 2026">September 2026</span></p>
+    <p class="font-display" style="font-weight:600; font-size:.9rem; margin:.2rem 0 0;">ERP Bakso Mie Ayam</p>
+    <p style="font-size:.72rem; color: var(--t3); margin:0 0 .6rem;"><span data-i18n data-id="Aplikasi Android" data-en="Android App">Aplikasi Android</span></p>
+    <ul class="bullet-list"><li style="font-size:.72rem;"><span style="color: var(--c);">✓</span> <span data-i18n data-id="Dibangun dengan Flutter (Dart, Material 3), database SQLite lokal (11 tabel via sqflite, offline tanpa server) dan state management Provider, dengan arsitektur berlapis (screens, providers, repositories, services)." data-en="Built with Flutter (Dart, Material 3), a local SQLite database (11 tables via sqflite, offline without a server) and Provider state management, with a layered architecture (screens, providers, repositories, services).">Dibangun dengan Flutter (Dart, Material 3), database SQLite lokal (11 tabel via sqflite, offline tanpa server) dan state management Provider, dengan arsitektur berlapis (screens, providers, repositories, services).</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">✓</span> <span data-i18n data-id="Alur sistem: data master (produk, customer, bahan baku) → pembelian bahan baku → pesanan → penjualan → pencatatan pengeluaran → dashboard omzet/HPP/laba bersih → laporan harian/bulanan (export &amp; share) → backup/restore." data-en="System flow: master data (products, customers, raw materials) → raw material purchases → orders → sales → expense recording → revenue/COGS/net profit dashboard → daily/monthly reports (export &amp; share) → backup/restore.">Alur sistem: data master (produk, customer, bahan baku) → pembelian bahan baku → pesanan → penjualan → pencatatan pengeluaran → dashboard omzet/HPP/laba bersih → laporan harian/bulanan (export &amp; share) → backup/restore.</span></li><li style="font-size:.72rem;"><span style="color: var(--c);">✓</span> <span data-i18n data-id="Build APK release otomatis melalui GitHub Actions (flutter analyze, flutter test, flutter build apk)." data-en="Automated release APK builds via GitHub Actions (flutter analyze, flutter test, flutter build apk).">Build APK release otomatis melalui GitHub Actions (flutter analyze, flutter test, flutter build apk).</span></li></ul>
+    <div style="margin-top:.6rem;"><div class="chip-row"><span class="chip" style="font-size:.58rem;">Flutter</span><span class="chip" style="font-size:.58rem;">Dart</span><span class="chip" style="font-size:.58rem;">SQLite</span><span class="chip" style="font-size:.58rem;">sqflite</span><span class="chip" style="font-size:.58rem;">Provider</span><span class="chip" style="font-size:.58rem;">GitHub Actions</span></div></div>
+  </div>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="page-flip-content">
+                <p class="font-mono" style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:.5rem; color: var(--c);">05 — <span data-i18n data-id="Pendidikan" data-en="Education">Pendidikan</span></p>
+                <h3 class="font-display" style="font-weight:700; font-size:1.1rem; margin:0 0 1rem; color: var(--t);"><span data-i18n data-id="Riwayat Pendidikan" data-en="Education History">Riwayat Pendidikan</span></h3>
+                <div style="padding-left:1rem; border-left:2px solid var(--cb);">
+    <p class="font-mono" style="font-size:.65rem; color: var(--c);">2007 – 2012</p>
+    <p class="font-display" style="font-weight:600; font-size:.95rem; margin:.25rem 0 0; color: var(--t);">STMIK Pranata Indonesia</p>
+    <p style="font-size:.85rem; color: var(--t2); margin:.25rem 0 0;"><span data-i18n data-id="S1 Teknik Informatika" data-en="Bachelor&#x27;s Degree in Informatics Engineering">S1 Teknik Informatika</span></p>
+    <p style="font-size:.75rem; color: var(--t3); margin:.4rem 0 0;"><span data-i18n data-id="IPK" data-en="GPA">IPK</span>: 3.03</p>
+  </div>
+            </div>
+        </div>
+
+        <!-- Halaman terakhir: Contact -->
+        <div class="page" data-density="hard">
+            <div class="page-flip-content" style="display:flex; flex-direction:column;">
+                <p class="font-mono" style="font-size:.65rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:.5rem; color: var(--c);">06 — <span data-i18n data-id="Kontak" data-en="Contact">Kontak</span></p>
+                <h3 class="font-display" style="font-weight:700; font-size:1.1rem; margin:0 0 1.25rem; color: var(--t);" data-i18n data-id="Mari Berdiskusi" data-en="Let's Talk">Mari Berdiskusi</h3>
+
+                <a href="mailto:vflanker@gmail.com" style="display:flex; align-items:center; gap:.5rem; font-size:.85rem; margin-bottom:.75rem; color: var(--t2); text-decoration:none;" data-cursor-hover>✉ vflanker@gmail.com</a>
+                <a href="https://wa.me/6287838627072" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:.5rem; font-size:.85rem; margin-bottom:1.5rem; color: var(--t2); text-decoration:none;" data-cursor-hover>📱 0878-3862-7072</a>
+
+                <div style="margin-top:auto; padding-top:1.5rem; text-align:center;">
+                    <a href="#contact" data-close-book class="btn btn-c" style="display:inline-flex;" data-cursor-hover>
+                        <span data-i18n data-id="Isi Form Kontak" data-en="Go to Contact Form">Isi Form Kontak</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="scroll-sections">
+
+<!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+<section id="about" class="section-pad max-w-5xl">
+    <div class="fade-up section-head">
+        <p class="font-mono eyebrow" style="color: var(--c);" data-i18n data-id="Tentang Saya" data-en="About Me">Tentang Saya</p>
+        <h2 class="font-display section-title" style="color: var(--t);" data-i18n data-id="Ringkasan Profil" data-en="Profile Summary">Ringkasan Profil</h2>
+    </div>
+
+    <div class="grid-2 gap-10">
+        <div class="fade-up">
+            <p style="color: var(--t2); line-height:1.7; margin-bottom:1rem;" data-i18n data-id="Full Stack Developer dengan pengalaman 8+ tahun dalam siklus pengembangan perangkat lunak (SDLC) lengkap: analisis kebutuhan, desain, coding, testing, hingga deployment dan pemeliharaan aplikasi web production di sektor korporat dan perbankan. Kuat di ekosistem PHP modern (Laravel dan CodeIgniter), perancangan dan pengamanan RESTful API, optimasi query MySQL/MariaDB, serta antarmuka HTML5, CSS3, JavaScript, dan Vue 3." data-en="Full Stack Developer with 8+ years of experience across the full software development life cycle (SDLC): requirements analysis, design, coding, testing, through deployment and maintenance of production web applications in the corporate and banking sectors. Strong in the modern PHP ecosystem (Laravel and CodeIgniter), RESTful API design and security, MySQL/MariaDB query optimization, and HTML5, CSS3, JavaScript, and Vue 3 interfaces.">Full Stack Developer dengan pengalaman 8+ tahun dalam siklus pengembangan perangkat lunak (SDLC) lengkap: analisis kebutuhan, desain, coding, testing, hingga deployment dan pemeliharaan aplikasi web production di sektor korporat dan perbankan. Kuat di ekosistem PHP modern (Laravel dan CodeIgniter), perancangan dan pengamanan RESTful API, optimasi query MySQL/MariaDB, serta antarmuka HTML5, CSS3, JavaScript, dan Vue 3.</p>
+            <p style="color: var(--t2); line-height:1.7; margin:0;" data-i18n data-id="Terbiasa memelihara dan meng-upgrade sistem legacy, mengelola repository Git dengan alur branching dan code review, membangun pipeline CI/CD, serta deployment dengan Docker di server Linux. Menguasai Python untuk scripting, otomasi deployment, dan pembuatan API (FastAPI). Cepat mempelajari teknologi baru dan berpengalaman memimpin serta membimbing developer junior." data-en="Experienced in maintaining and upgrading legacy systems, managing Git repositories with branching workflows and code review, building CI/CD pipelines, and deploying with Docker on Linux servers. Proficient in Python for scripting, deployment automation, and API development (FastAPI). A fast learner of new technologies with experience leading and mentoring junior developers.">Terbiasa memelihara dan meng-upgrade sistem legacy, mengelola repository Git dengan alur branching dan code review, membangun pipeline CI/CD, serta deployment dengan Docker di server Linux. Menguasai Python untuk scripting, otomasi deployment, dan pembuatan API (FastAPI). Cepat mempelajari teknologi baru dan berpengalaman memimpin serta membimbing developer junior.</p>
+        </div>
+
+        <div class="fade-up">
+            <p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.75rem;" data-i18n data-id="Sorotan" data-en="Highlights">Sorotan</p>
+            <ul class="bullet-list"><li><span style="color: var(--c);">▸</span> <span data-i18n data-id="Siklus SDLC lengkap: analisis, desain, coding, testing, deployment, pemeliharaan" data-en="Full SDLC: analysis, design, coding, testing, deployment, maintenance">Siklus SDLC lengkap: analisis, desain, coding, testing, deployment, pemeliharaan</span></li><li><span style="color: var(--c);">▸</span> <span data-i18n data-id="Sistem telesales untuk 6 klien perbankan (BCA, UOB, Permata, Mandiri, Nobu, Maybank)" data-en="Telesales systems for 6 banking clients (BCA, UOB, Permata, Mandiri, Nobu, Maybank)">Sistem telesales untuk 6 klien perbankan (BCA, UOB, Permata, Mandiri, Nobu, Maybank)</span></li><li><span style="color: var(--c);">▸</span> <span data-i18n data-id="Otomasi deployment dengan Python: rilis dari 5 menit menjadi 1 menit" data-en="Python deployment automation: releases cut from 5 minutes to 1 minute">Otomasi deployment dengan Python: rilis dari 5 menit menjadi 1 menit</span></li><li><span style="color: var(--c);">▸</span> <span data-i18n data-id="Memimpin tim kecil 1–2 developer dengan code review rutin dan mentoring" data-en="Led a small team of 1–2 developers with regular code review and mentoring">Memimpin tim kecil 1–2 developer dengan code review rutin dan mentoring</span></li></ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+<section id="skills" class="section-pad max-w-6xl">
+    <div class="fade-up section-head">
+        <p class="font-mono eyebrow" style="color: var(--c);" data-i18n data-id="Kemampuan" data-en="Skills">Kemampuan</p>
+        <h2 class="font-display section-title" style="color: var(--t);" data-i18n data-id="Keahlian Teknis" data-en="Technical Skills">Keahlian Teknis</h2>
+    </div>
+    <div class="skill-grid">
+        <div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Backend &amp; Framework" data-en="Backend &amp; Frameworks">Backend &amp; Framework</p><div class="chip-row"><span class="chip">PHP (7.x/8.x)</span><span class="chip">Laravel</span><span class="chip">CodeIgniter</span><span class="chip" data-i18n data-id="Python (FastAPI, scripting &amp; automasi)" data-en="Python (FastAPI, scripting &amp; automation)">Python (FastAPI, scripting &amp; automasi)</span><span class="chip">Go</span><span class="chip">Spring Boot</span></div></div><div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Frontend" data-en="Frontend">Frontend</p><div class="chip-row"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">Vue 3</span></div></div><div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Database" data-en="Database">Database</p><div class="chip-row"><span class="chip" data-i18n data-id="MySQL (utama)" data-en="MySQL (primary)">MySQL (utama)</span><span class="chip">MariaDB</span><span class="chip">PostgreSQL</span></div><p style="font-size:.8rem; color: var(--t3); margin:.6rem 0 0;"><span data-i18n data-id="Desain database, penulisan query efisien, dan tuning performa." data-en="Database design, efficient query writing, and performance tuning.">Desain database, penulisan query efisien, dan tuning performa.</span></p></div><div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="API &amp; Integrasi" data-en="API &amp; Integration">API &amp; Integrasi</p><div class="chip-row"><span class="chip">RESTful API / Web Services</span><span class="chip">GraphQL</span><span class="chip">JWT</span><span class="chip">OAuth</span><span class="chip">Sanctum</span><span class="chip">Microservices</span><span class="chip" data-i18n data-id="Integrasi PABX dan Asterisk" data-en="PABX and Asterisk integration">Integrasi PABX dan Asterisk</span><span class="chip" data-i18n data-id="Integrasi layanan pihak ketiga" data-en="Third-party service integration">Integrasi layanan pihak ketiga</span></div></div><div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Version Control &amp; CI/CD" data-en="Version Control &amp; CI/CD">Version Control &amp; CI/CD</p><div class="chip-row"><span class="chip">Git (branching, pull request, code review)</span><span class="chip">GitHub Actions</span><span class="chip">GitLab CI</span><span class="chip">Jenkins</span></div></div><div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Infrastruktur &amp; Monitoring" data-en="Infrastructure &amp; Monitoring">Infrastruktur &amp; Monitoring</p><div class="chip-row"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip" data-i18n data-id="Linux (server &amp; CLI)" data-en="Linux (server &amp; CLI)">Linux (server &amp; CLI)</span><span class="chip">AWS (EC2)</span><span class="chip">Cloudflare</span><span class="chip">Redis</span><span class="chip">Apache Kafka</span><span class="chip">Grafana</span><span class="chip">Prometheus</span></div></div><div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Praktik Kerja" data-en="Work Practices">Praktik Kerja</p><div class="chip-row"><span class="chip" data-i18n data-id="Clean code" data-en="Clean code">Clean code</span><span class="chip">Refactoring</span><span class="chip">Application security (OWASP Top 10)</span><span class="chip" data-i18n data-id="Debugging masalah production" data-en="Production debugging">Debugging masalah production</span><span class="chip" data-i18n data-id="Dokumentasi kode" data-en="Code documentation">Dokumentasi kode</span><span class="chip">Mentoring</span></div></div><div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="AI Coding" data-en="AI Coding">AI Coding</p><p style="font-size:.8rem; color: var(--t2); line-height:1.6; margin:0;"><span data-i18n data-id="Pemanfaatan AI coding assistant untuk mempercepat coding, debugging, refactoring, dan dokumentasi." data-en="Using AI coding assistants to speed up coding, debugging, refactoring, and documentation.">Pemanfaatan AI coding assistant untuk mempercepat coding, debugging, refactoring, dan dokumentasi.</span></p></div><div class="glass skill-card fade-up"><p class="font-mono eyebrow" style="color: var(--c); margin-bottom:.6rem;" data-i18n data-id="Bahasa" data-en="Languages">Bahasa</p><div class="skill-row" style="font-size:.8rem; margin-top:.4rem;"><span><span data-i18n data-id="Indonesia" data-en="Indonesian">Indonesia</span></span><span class="font-mono" style="color:var(--c);"><span data-i18n data-id="Native" data-en="Native">Native</span></span></div><div class="skill-row" style="font-size:.8rem; margin-top:.4rem;"><span><span data-i18n data-id="Inggris" data-en="English">Inggris</span></span><span class="font-mono" style="color:var(--c);"><span data-i18n data-id="Menengah — lisan &amp; tulisan" data-en="Intermediate — spoken &amp; written">Menengah — lisan &amp; tulisan</span></span></div></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ TECH STACK MARQUEE ═══════════════════════ -->
+<section id="techstack" class="section-pad-tight">
+    <div class="fade-up section-head max-w-5xl" style="text-align:center;">
+        <p class="font-mono eyebrow" style="color: var(--c);" data-i18n data-id="Tech Stack" data-en="Tech Stack">Tech Stack</p>
+        <h2 class="font-display section-title" style="color: var(--t);" data-i18n data-id="Teknologi yang Digunakan" data-en="Technologies Used">Teknologi yang Digunakan</h2>
+    </div>
+
+    <div style="position:relative;">
+        <div class="mq-track" id="mq-track"></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+<section id="experience" class="section-pad max-w-4xl">
+    <div class="fade-up section-head">
+        <p class="font-mono eyebrow" style="color: var(--c);" data-i18n data-id="Pengalaman" data-en="Experience">Pengalaman</p>
+        <h2 class="font-display section-title" style="color: var(--t);" data-i18n data-id="Pengalaman Kerja" data-en="Work Experience">Pengalaman Kerja</h2>
+    </div>
+
+    <div style="position:relative; padding-left:2rem; border-left:2px solid var(--cb);">
+        <div class="fade-up" style="position:relative; margin-bottom:3rem;">
+            <span style="position:absolute; left:-41px; top:4px; width:16px; height:16px; border-radius:50%; background:var(--c); box-shadow:0 0 12px var(--c);"></span>
+            <p class="font-mono" style="font-size:.75rem; margin-bottom:.25rem; color: var(--c);"><span data-i18n data-id="Juli 2022 – Agustus 2025" data-en="July 2022 – August 2025">Juli 2022 – Agustus 2025</span></p>
+            <h3 class="font-display" style="font-size:1.15rem; font-weight:700; color: var(--t); margin:0 0 .25rem;">IT Programmer</h3>
+            <p style="color: var(--t2); margin:0 0 .75rem;">PT Danamas Insan Kreasi Andalan</p>
+            <div style="margin-bottom:.75rem;"><ul class="bullet-list"><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Merancang, membangun, dan men-deploy 3+ sistem backend berbasis Laravel, CodeIgniter, Spring Boot, dan Go sesuai kebutuhan bisnis, mencakup analisis, desain, coding, testing, hingga production." data-en="Designed, built, and deployed 3+ backend systems based on Laravel, CodeIgniter, Spring Boot, and Go to meet business needs, covering analysis, design, coding, testing, up to production.">Merancang, membangun, dan men-deploy 3+ sistem backend berbasis Laravel, CodeIgniter, Spring Boot, dan Go sesuai kebutuhan bisnis, mencakup analisis, desain, coding, testing, hingga production.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Merancang dan mengamankan RESTful API serta arsitektur microservices yang scalable untuk integrasi antar sistem, dengan dokumentasi kode yang terjaga." data-en="Designed and secured RESTful APIs and scalable microservices architecture for system-to-system integration, with well-maintained code documentation.">Merancang dan mengamankan RESTful API serta arsitektur microservices yang scalable untuk integrasi antar sistem, dengan dokumentasi kode yang terjaga.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Membuat script Python untuk otomasi deployment yang mempercepat proses rilis dari 5 menit menjadi 1 menit, serta otomasi pembuatan report; membangun layanan API dengan FastAPI." data-en="Wrote Python scripts for deployment automation that cut release time from 5 minutes to 1 minute, plus report generation automation; built API services with FastAPI.">Membuat script Python untuk otomasi deployment yang mempercepat proses rilis dari 5 menit menjadi 1 menit, serta otomasi pembuatan report; membangun layanan API dengan FastAPI.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Membangun dan memelihara pipeline CI/CD (GitHub) untuk otomasi build, testing, dan deployment; mengelola server Linux production melalui CLI." data-en="Built and maintained CI/CD pipelines (GitHub) to automate build, testing, and deployment; managed production Linux servers via CLI.">Membangun dan memelihara pipeline CI/CD (GitHub) untuk otomasi build, testing, dan deployment; mengelola server Linux production melalui CLI.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Men-deploy aplikasi ke AWS (EC2) dan Cloudflare, serta memantau performa dan kesehatan sistem dengan Grafana dan Prometheus; berpengalaman menggunakan Kubernetes." data-en="Deployed applications to AWS (EC2) and Cloudflare, and monitored system performance and health with Grafana and Prometheus; experienced with Kubernetes.">Men-deploy aplikasi ke AWS (EC2) dan Cloudflare, serta memantau performa dan kesehatan sistem dengan Grafana dan Prometheus; berpengalaman menggunakan Kubernetes.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Melakukan tuning database MySQL, MariaDB, dan PostgreSQL (optimasi query dan indeks) untuk menjaga performa dan stabilitas sistem." data-en="Tuned MySQL, MariaDB, and PostgreSQL databases (query and index optimization) to maintain system performance and stability.">Melakukan tuning database MySQL, MariaDB, dan PostgreSQL (optimasi query dan indeks) untuk menjaga performa dan stabilitas sistem.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Menerapkan application security (OWASP) dan caching Redis untuk melindungi data pengguna dan meningkatkan performa." data-en="Applied application security (OWASP) and Redis caching to protect user data and improve performance.">Menerapkan application security (OWASP) dan caching Redis untuk melindungi data pengguna dan meningkatkan performa.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Memimpin tim kecil (1–2 developer), menerapkan alur Git dan code review rutin, serta memberi mentoring teknis untuk menjaga standar kualitas kode." data-en="Led a small team (1–2 developers), applied Git workflows and regular code review, and provided technical mentoring to maintain code quality standards.">Memimpin tim kecil (1–2 developer), menerapkan alur Git dan code review rutin, serta memberi mentoring teknis untuk menjaga standar kualitas kode.</span></li></ul></div>
+            <div class="chip-row"><span class="chip chip-solid">Laravel</span><span class="chip chip-solid">CodeIgniter</span><span class="chip chip-solid">Spring Boot</span><span class="chip chip-solid">Go</span><span class="chip chip-solid">Python</span><span class="chip chip-solid">FastAPI</span><span class="chip chip-solid">Docker</span><span class="chip chip-solid">Kubernetes</span><span class="chip chip-solid">GitHub Actions</span><span class="chip chip-solid">AWS EC2</span><span class="chip chip-solid">Cloudflare</span><span class="chip chip-solid">Redis</span><span class="chip chip-solid">Grafana</span><span class="chip chip-solid">Prometheus</span></div>
+            
+        </div>
+        <div class="fade-up" style="position:relative; margin-bottom:0;">
+            <span style="position:absolute; left:-41px; top:4px; width:16px; height:16px; border-radius:50%; background:var(--c); box-shadow:0 0 12px var(--c);"></span>
+            <p class="font-mono" style="font-size:.75rem; margin-bottom:.25rem; color: var(--c);"><span data-i18n data-id="September 2014 – Juli 2022" data-en="September 2014 – July 2022">September 2014 – Juli 2022</span></p>
+            <h3 class="font-display" style="font-size:1.15rem; font-weight:700; color: var(--t); margin:0 0 .25rem;">IT Programmer</h3>
+            <p style="color: var(--t2); margin:0 0 .75rem;">PT Valdo Sumber Mandiri</p>
+            <div style="margin-bottom:.75rem;"><ul class="bullet-list"><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Mengembangkan dan memelihara sistem telesales berbasis PHP (CodeIgniter) dan Docker untuk 6 klien perbankan (BCA, UOB, Permata, Mandiri, Nobu, Maybank), termasuk integrasi ke berbagai layanan pihak ketiga." data-en="Developed and maintained telesales systems based on PHP (CodeIgniter) and Docker for 6 banking clients (BCA, UOB, Permata, Mandiri, Nobu, Maybank), including integration with various third-party services.">Mengembangkan dan memelihara sistem telesales berbasis PHP (CodeIgniter) dan Docker untuk 6 klien perbankan (BCA, UOB, Permata, Mandiri, Nobu, Maybank), termasuk integrasi ke berbagai layanan pihak ketiga.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Merancang dan membangun antarmuka sistem menggunakan HTML, CSS, dan JavaScript." data-en="Designed and built system interfaces using HTML, CSS, and JavaScript.">Merancang dan membangun antarmuka sistem menggunakan HTML, CSS, dan JavaScript.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Bertanggung jawab atas deployment dan pengelolaan sistem produksi berbasis PHP, MySQL, dan MariaDB di server Linux, termasuk query optimization dan tuning performa." data-en="Responsible for deploying and managing production systems based on PHP, MySQL, and MariaDB on Linux servers, including query optimization and performance tuning.">Bertanggung jawab atas deployment dan pengelolaan sistem produksi berbasis PHP, MySQL, dan MariaDB di server Linux, termasuk query optimization dan tuning performa.</span></li><li style="font-size:.9rem;"><span style="color: var(--c);">▸</span> <span data-i18n data-id="Menganalisis, men-debug, dan memperbaiki masalah pada sistem production serta menjaga keamanan dan keandalan sistem yang menangani data sensitif perbankan dalam jangka panjang." data-en="Analyzed, debugged, and fixed issues on production systems while maintaining the long-term security and reliability of systems handling sensitive banking data.">Menganalisis, men-debug, dan memperbaiki masalah pada sistem production serta menjaga keamanan dan keandalan sistem yang menangani data sensitif perbankan dalam jangka panjang.</span></li></ul></div>
+            <div class="chip-row"><span class="chip chip-solid">PHP</span><span class="chip chip-solid">CodeIgniter</span><span class="chip chip-solid">Docker</span><span class="chip chip-solid">MySQL</span><span class="chip chip-solid">MariaDB</span><span class="chip chip-solid">HTML</span><span class="chip chip-solid">CSS</span><span class="chip chip-solid">JavaScript</span><span class="chip chip-solid">Linux</span></div>
+            <p style="font-size:.8rem; color: var(--t3); margin-top:.75rem;"><span data-i18n data-id="Klien" data-en="Clients">Klien</span>: BCA, UOB, Permata, Mandiri, Nobu, Maybank</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+<section id="projects" class="section-pad max-w-6xl">
+    <div class="fade-up section-head">
+        <p class="font-mono eyebrow" style="color: var(--c);" data-i18n data-id="Proyek" data-en="Projects">Proyek</p>
+        <h2 class="font-display section-title" style="color: var(--t);" data-i18n data-id="Proyek Pribadi" data-en="Personal Projects">Proyek Pribadi</h2>
+    </div>
+
+    <div class="grid-2 gap-6">
+        <div class="fade-up glass" style="padding:1.5rem; display:flex; flex-direction:column;">
+            <span class="chip chip-solid" style="margin-bottom:.75rem; width:fit-content;">WEB · REAL-TIME</span>
+            <p class="font-mono" style="font-size:.72rem; color: var(--c); margin:0 0 .35rem;"><span data-i18n data-id="Mei 2026 – Juli 2026" data-en="May 2026 – July 2026">Mei 2026 – Juli 2026</span></p>
+            <h3 class="font-display" style="font-size:1.15rem; font-weight:700; color: var(--t); margin:0 0 .15rem;">Kopi Senja</h3>
+            <p style="font-size:.9rem; color: var(--t2); margin:0 0 1rem;"><span data-i18n data-id="Sistem Manajemen Coffee Shop Real-time" data-en="Real-time Coffee Shop Management System">Sistem Manajemen Coffee Shop Real-time</span></p>
+            <div style="margin-bottom:1rem;"><ul class="bullet-list"><li><span style="color: var(--c);">✓</span> <span data-i18n data-id="Dibangun dengan Laravel 11, PostgreSQL, Vue 3, dan Laravel Reverb (WebSocket); fitur pemesanan via QR meja, kitchen display, dan akses multi-role." data-en="Built with Laravel 11, PostgreSQL, Vue 3, and Laravel Reverb (WebSocket); features table-QR ordering, a kitchen display, and multi-role access.">Dibangun dengan Laravel 11, PostgreSQL, Vue 3, dan Laravel Reverb (WebSocket); fitur pemesanan via QR meja, kitchen display, dan akses multi-role.</span></li><li><span style="color: var(--c);">✓</span> <span data-i18n data-id="Menyelesaikan kendala deployment di stack Windows/WampServer: konflik versi PHP, sesi CSRF, dan routing IP LAN untuk QR code." data-en="Resolved deployment issues on the Windows/WampServer stack: PHP version conflicts, CSRF sessions, and LAN IP routing for QR codes.">Menyelesaikan kendala deployment di stack Windows/WampServer: konflik versi PHP, sesi CSRF, dan routing IP LAN untuk QR code.</span></li></ul></div>
+            <div class="chip-row" style="margin-top:auto;"><span class="chip">Laravel 11</span><span class="chip">PostgreSQL</span><span class="chip">Vue 3</span><span class="chip">Laravel Reverb</span><span class="chip">WebSocket</span></div>
+        </div>
+        <div class="fade-up glass" style="padding:1.5rem; display:flex; flex-direction:column;">
+            <span class="chip chip-solid" style="margin-bottom:.75rem; width:fit-content;">WEB · POS</span>
+            <p class="font-mono" style="font-size:.72rem; color: var(--c); margin:0 0 .35rem;"><span data-i18n data-id="Juli 2026 – Agustus 2026" data-en="July 2026 – August 2026">Juli 2026 – Agustus 2026</span></p>
+            <h3 class="font-display" style="font-size:1.15rem; font-weight:700; color: var(--t); margin:0 0 .15rem;">RumahAtap</h3>
+            <p style="font-size:.9rem; color: var(--t2); margin:0 0 1rem;"><span data-i18n data-id="Sistem POS &amp; Manajemen Depot Multi-outlet" data-en="POS &amp; Multi-outlet Depot Management System">Sistem POS &amp; Manajemen Depot Multi-outlet</span></p>
+            <div style="margin-bottom:1rem;"><ul class="bullet-list"><li><span style="color: var(--c);">✓</span> <span data-i18n data-id="Dibangun dengan Laravel 11, MySQL, dan Bootstrap 5; fitur barcode scanning, multi-kasir, laporan Excel/PDF, dan pelacakan status pembayaran." data-en="Built with Laravel 11, MySQL, and Bootstrap 5; features barcode scanning, multi-cashier, Excel/PDF reports, and payment status tracking.">Dibangun dengan Laravel 11, MySQL, dan Bootstrap 5; fitur barcode scanning, multi-kasir, laporan Excel/PDF, dan pelacakan status pembayaran.</span></li></ul></div>
+            <div class="chip-row" style="margin-top:auto;"><span class="chip">Laravel 11</span><span class="chip">MySQL</span><span class="chip">Bootstrap 5</span></div>
+        </div>
+        <div class="fade-up glass proj-wide" style="padding:1.5rem; display:flex; flex-direction:column;">
+            <span class="chip chip-solid" style="margin-bottom:.75rem; width:fit-content;">MOBILE · ANDROID</span>
+            <p class="font-mono" style="font-size:.72rem; color: var(--c); margin:0 0 .35rem;"><span data-i18n data-id="September 2026" data-en="September 2026">September 2026</span></p>
+            <h3 class="font-display" style="font-size:1.15rem; font-weight:700; color: var(--t); margin:0 0 .15rem;">ERP Bakso Mie Ayam</h3>
+            <p style="font-size:.9rem; color: var(--t2); margin:0 0 1rem;"><span data-i18n data-id="Aplikasi Android" data-en="Android App">Aplikasi Android</span></p>
+            <div style="margin-bottom:1rem;"><ul class="bullet-list"><li><span style="color: var(--c);">✓</span> <span data-i18n data-id="Dibangun dengan Flutter (Dart, Material 3), database SQLite lokal (11 tabel via sqflite, offline tanpa server) dan state management Provider, dengan arsitektur berlapis (screens, providers, repositories, services)." data-en="Built with Flutter (Dart, Material 3), a local SQLite database (11 tables via sqflite, offline without a server) and Provider state management, with a layered architecture (screens, providers, repositories, services).">Dibangun dengan Flutter (Dart, Material 3), database SQLite lokal (11 tabel via sqflite, offline tanpa server) dan state management Provider, dengan arsitektur berlapis (screens, providers, repositories, services).</span></li><li><span style="color: var(--c);">✓</span> <span data-i18n data-id="Alur sistem: data master (produk, customer, bahan baku) → pembelian bahan baku → pesanan → penjualan → pencatatan pengeluaran → dashboard omzet/HPP/laba bersih → laporan harian/bulanan (export &amp; share) → backup/restore." data-en="System flow: master data (products, customers, raw materials) → raw material purchases → orders → sales → expense recording → revenue/COGS/net profit dashboard → daily/monthly reports (export &amp; share) → backup/restore.">Alur sistem: data master (produk, customer, bahan baku) → pembelian bahan baku → pesanan → penjualan → pencatatan pengeluaran → dashboard omzet/HPP/laba bersih → laporan harian/bulanan (export &amp; share) → backup/restore.</span></li><li><span style="color: var(--c);">✓</span> <span data-i18n data-id="Build APK release otomatis melalui GitHub Actions (flutter analyze, flutter test, flutter build apk)." data-en="Automated release APK builds via GitHub Actions (flutter analyze, flutter test, flutter build apk).">Build APK release otomatis melalui GitHub Actions (flutter analyze, flutter test, flutter build apk).</span></li></ul></div>
+            <div class="chip-row" style="margin-top:auto;"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">SQLite</span><span class="chip">sqflite</span><span class="chip">Provider</span><span class="chip">GitHub Actions</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ EDUCATION ═══════════════════════ -->
+<section id="education" class="section-pad max-w-4xl">
+    <div class="fade-up section-head">
+        <p class="font-mono eyebrow" style="color: var(--c);" data-i18n data-id="Pendidikan" data-en="Education">Pendidikan</p>
+        <h2 class="font-display section-title" style="color: var(--t);" data-i18n data-id="Riwayat Pendidikan" data-en="Education History">Riwayat Pendidikan</h2>
+    </div>
+
+    <div class="fade-up glass" style="padding:1.75rem;">
+        <p class="font-mono" style="font-size:.7rem; color: var(--c); margin-bottom:.5rem;">2007 – 2012</p>
+        <h3 class="font-display" style="font-size:1.2rem; font-weight:700; color: var(--t); margin:0 0 .25rem;">STMIK Pranata Indonesia</h3>
+        <p style="color: var(--t2); margin:0 0 .5rem;"><span data-i18n data-id="S1 Teknik Informatika" data-en="Bachelor&#x27;s Degree in Informatics Engineering">S1 Teknik Informatika</span></p>
+        <p class="font-mono" style="font-size:.8rem; color: var(--t3); margin:0;"><span data-i18n data-id="IPK" data-en="GPA">IPK</span> 3.03</p>
+    </div>
+</section>
+
+<!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+<section id="contact" class="section-pad max-w-5xl">
+    <div class="fade-up section-head">
+        <p class="font-mono eyebrow" style="color: var(--c);" data-i18n data-id="Kontak" data-en="Contact">Kontak</p>
+        <h2 class="font-display section-title" style="color: var(--t);" data-i18n data-id="Mari Berdiskusi" data-en="Let's Talk">Mari Berdiskusi</h2>
+    </div>
+
+    <div class="grid-2 gap-10">
+        <div class="fade-up" style="display:flex; flex-direction:column; gap:1rem;">
+            <a href="mailto:vflanker@gmail.com" class="glass contact-card" data-cursor-hover>
+                <span style="font-size:1.3rem;">✉</span>
+                <div>
+                    <p class="font-mono" style="font-size:.7rem; text-transform:uppercase; color: var(--t3); margin:0;" data-i18n data-id="Email" data-en="Email">Email</p>
+                    <p style="font-size:.9rem; color: var(--t); margin:0;">vflanker@gmail.com</p>
+                </div>
+            </a>
+
+            <a href="https://wa.me/6287838627072" target="_blank" rel="noopener" class="glass contact-card" data-cursor-hover>
+                <span style="font-size:1.3rem;">📱</span>
+                <div>
+                    <p class="font-mono" style="font-size:.7rem; text-transform:uppercase; color: var(--t3); margin:0;">WhatsApp</p>
+                    <p style="font-size:.9rem; color: var(--t); margin:0;">0878-3862-7072</p>
+                </div>
+            </a>
+
+            <div class="glass contact-card" style="cursor:default;">
+                <span style="font-size:1.3rem;">📍</span>
+                <div>
+                    <p class="font-mono" style="font-size:.7rem; text-transform:uppercase; color: var(--t3); margin:0;" data-i18n data-id="Lokasi" data-en="Location">Lokasi</p>
+                    <p style="font-size:.9rem; color: var(--t); margin:0;">PUP Blok AM 25 No.1, Bekasi, 17610</p>
+                </div>
+            </div>
+        </div>
+
+        <form id="contact-form" data-contact-email="vflanker@gmail.com" class="fade-up" style="display:flex; flex-direction:column; gap:1rem;">
+            <div>
+                <label class="font-mono" style="display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:.4rem; color: var(--t2);" data-i18n data-id="Nama Lengkap" data-en="Full Name">Nama Lengkap</label>
+                <input type="text" name="name" required class="glass form-input">
+            </div>
+            <div>
+                <label class="font-mono" style="display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:.4rem; color: var(--t2);" data-i18n data-id="Alamat Email" data-en="Email Address">Alamat Email</label>
+                <input type="email" name="email" required class="glass form-input">
+            </div>
+            <div>
+                <label class="font-mono" style="display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:.4rem; color: var(--t2);" data-i18n data-id="Subjek" data-en="Subject">Subjek</label>
+                <input type="text" name="subject" class="glass form-input">
+            </div>
+            <div>
+                <label class="font-mono" style="display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:.4rem; color: var(--t2);" data-i18n data-id="Pesan" data-en="Message">Pesan</label>
+                <textarea name="message" rows="4" required class="glass form-input" style="resize:none;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-c" style="justify-content:center;" data-cursor-hover>
+                <span data-i18n data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</span>
+            </button>
+            <p id="contact-form-feedback" class="font-mono hidden" style="font-size:.75rem;"></p>
+        </form>
+    </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer style="padding:2.5rem 1.5rem; border-top:1px solid var(--gb); text-align:center;">
+    <p class="font-mono" style="font-size:.75rem; color: var(--t3); margin:0;">
+        © 2026 Ade Ramadona. <span data-i18n data-id="Seluruh hak cipta dilindungi." data-en="All rights reserved.">Seluruh hak cipta dilindungi.</span>
+    </p>
+    <p class="font-mono" style="font-size:.6rem; color: var(--t3); margin:.5rem 0 0;">
+        <span data-i18n data-id="Dibangun dengan" data-en="Built with">Dibangun dengan</span> HTML · CSS · JavaScript
+    </p>
+</footer>
+
+</div><!-- /#scroll-sections -->
+
+<style>
+.section-pad { padding: 5rem 1.5rem; max-width: 64rem; margin: 0 auto; }
+.section-pad-tight { padding: 5rem 0; overflow: hidden; }
+.max-w-6xl.section-pad { max-width: 72rem; }
+.max-w-4xl.section-pad { max-width: 56rem; }
+.section-head { margin-bottom: 3rem; text-align: center; }
+.eyebrow { font-size: .65rem; text-transform: uppercase; letter-spacing: .15em; margin-bottom: .5rem; }
+.section-title { font-weight: 700; font-size: 1.9rem; margin: 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr; }
+.gap-10 { gap: 2.5rem; }
+.gap-6 { gap: 1.5rem; }
+.bullet-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .5rem; }
+.bullet-list li { display: flex; align-items: flex-start; gap: .5rem; font-size: .9rem; color: var(--t2); }
+.chip-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip { font-size: .7rem; font-family: 'JetBrains Mono', monospace; padding: .4rem .9rem; border-radius: 999px; border: 1px solid var(--cb); color: var(--c); background: transparent; }
+.chip-solid { background: var(--cg); border: none; border-radius: 4px; padding: .35rem .65rem; }
+.skill-row { display: flex; justify-content: space-between; font-size: .9rem; margin-bottom: .4rem; color: var(--t); }
+.contact-card { display: flex; align-items: center; gap: .9rem; padding: 1rem; text-decoration: none; color: inherit; }
+.form-input { width: 100%; border-radius: 8px; padding: .8rem 1rem; font-size: .9rem; background: transparent; outline: none; border: 1px solid var(--gb); color: var(--t); }
+.form-input:focus { border-color: var(--c); }
+.skill-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+.skill-card { padding: 1.25rem 1.4rem; }
+.skill-card .chip { font-size: .68rem; }
+.proj-wide { grid-column: auto; }
+@media (min-width: 768px) { .skill-grid { grid-template-columns: 1fr 1fr; } .proj-wide { grid-column: 1 / -1; } }
+@media (min-width: 1024px) { .skill-grid { grid-template-columns: repeat(3, 1fr); } }
+.hidden { display: none !important; }
+.mobile-menu-panel { display: flex; flex-direction: column; }
+.mobile-menu-panel.hidden { display: none !important; }
+[data-flip-prev]:disabled, [data-flip-next]:disabled { opacity: .3; cursor: not-allowed; }
+.btn-o:disabled:hover { transform: none !important; }
+
+#flipbook-container.is-open { display: flex !important; }
+#flipbook-container { perspective: 2400px; }
+
+#flipbook {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 600px;
+  max-height: 70vh;
+}
+.fb-page {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: transform .65s cubic-bezier(.4,0,.2,1), opacity .65s, box-shadow .65s;
+  backface-visibility: hidden;
+  opacity: 1;
+}
+.fb-page.fb-active { visibility: visible; transform: rotateY(0deg); opacity: 1; }
+.fb-page.fb-flip-next { visibility: visible; transform: rotateY(-100deg); opacity: 0; box-shadow: 0 20px 80px rgba(0,245,255,.15); }
+.fb-page.fb-flip-prev { visibility: visible; transform: rotateY(100deg); opacity: 0; box-shadow: 0 20px 80px rgba(0,245,255,.15); }
+
+.page-flip-content {
+  width: 100%; height: 100%;
+  background: linear-gradient(160deg, var(--bg2), var(--bg3));
+  border: 1px solid rgba(0,245,255,.08);
+  border-radius: 8px;
+  padding: 2rem 1.75rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c) transparent;
+  color: var(--t);
+}
+.page-flip-content::-webkit-scrollbar { width: 4px; }
+.page-flip-content::-webkit-scrollbar-thumb { background: var(--c); border-radius: 4px; }
+
+@media (max-width: 640px) {
+  #flipbook { height: 520px; max-height: 75vh; }
+  .page-flip-content { padding: 1.5rem 1.25rem; }
+}
+
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .section-head { text-align: left; }
+  .hero-text { text-align: left !important; }
+  .hero-text > div:last-child { justify-content: flex-start !important; }
+  .hero-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 767px) {
+  #desktop-nav { display: none !important; }
+  #mobile-menu-toggle { display: block !important; }
+}
+@media (min-width: 768px) {
+  #mobile-menu, #mobile-menu-toggle { display: none !important; }
+}
+</style>
+
+<script src="main.js"></script>
+<script>
+  // Isi marquee tech stack secara dinamis (2x list untuk loop mulus)
+  (function () {
+    const stacks = ['PHP', 'Laravel', 'CodeIgniter', 'Python', 'FastAPI', 'Go', 'Spring Boot', 'Vue 3', 'JavaScript', 'HTML5', 'CSS3', 'MySQL', 'MariaDB', 'PostgreSQL', 'GraphQL', 'JWT', 'OAuth', 'Sanctum', 'Git', 'GitHub Actions', 'GitLab CI', 'Jenkins', 'Docker', 'Kubernetes', 'Linux', 'AWS EC2', 'Cloudflare', 'Redis', 'Apache Kafka', 'Grafana', 'Prometheus'];
+    const track = document.getElementById('mq-track');
+    if (!track) return;
+    for (let r = 0; r < 2; r++) {
+      stacks.forEach((name) => {
+        const item = document.createElement('div');
+        item.className = 'glass';
+        item.title = name;
+        item.style.cssText = 'margin:0 .75rem; width:80px; height:80px; border-radius:12px; display:flex; align-items:center; justify-content:center; padding:.75rem; flex-shrink:0;';
+        item.innerHTML = `<span style="font-size:.6rem; font-family:'JetBrains Mono',monospace; text-align:center; line-height:1.2; color:var(--c);">${name}</span>`;
+        track.appendChild(item);
+      });
+    }
+  })();
+</script>
+</body>
+</html>
